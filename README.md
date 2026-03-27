@@ -92,8 +92,8 @@
 
 ### 1. (Optional) Create a Virtual Environment
 ```powershell
-python -m venv venv
-.\venv\Scripts\activate
+python -m eegenv venv
+.\eegenv\Scripts\activate
 ```
 
 ### 2. Install Required Packages
