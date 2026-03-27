@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explainable Deep Learning Framework | EEG Brain Aging</title>
+    <meta name="description" content="Explainable Deep Learning Framework for EEG-Based Prediction and Visualization of Accelerated Brain Aging using the SRM Resting-state dataset (ds003775).">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- ═══════════════════ HERO SECTION ═══════════════════ -->
+    <header class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-badge">DS003775 • SRM Resting-state EEG Dataset</div>
+            <h1>Neuro<span class="gradient-text">Age</span> AI</h1>
+            <p class="hero-subtitle">
+                Explainable Deep Learning Framework for EEG-Based Prediction <br>
+                and Visualization of Accelerated Brain Aging
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">111</span>
+                    <span class="stat-label">Subjects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">25</span>
+                    <span class="stat-label">EEG Features</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">15</span>
+                    <span class="stat-label">ML Models</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">SHAP+LIME</span>
+                    <span class="stat-label">Explainability</span>
+                </div>
+            </div>
+            <a href="#knowledge-hub" class="cta-btn secondary">
+                <span>Explore Knowledge Hub</span>
+            </a>
+            <a href="#input-section" class="cta-btn">
+                <span>Start Prediction</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- ═══════════════════ KNOWLEDGE HUB ═══════════════════ -->
+    <section class="section" id="knowledge-hub">
+        <div class="container">
+            <div class="section-header">
+                <div class="hero-badge">Neuro-Science Academy</div>
+                <h2>🧠 Neuro-Knowledge Hub</h2>
+                <p>Master the fundamentals of EEG analysis and Brain Age Prediction</p>
+            </div>
+
+            <div class="knowledge-grid">
+                <!-- Card 1: What is EEG -->
+                <div class="knowledge-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Electronic Brainprint</h3>
+                    <p>Electroencephalography (EEG) records the brain's spontaneous electrical activity over time. It measures voltage fluctuations resulting from ionic current within the neurons of the brain.</p>
+                </div>
+
+                <!-- Card 2: Frequency Bands -->
+                <div class="knowledge-card">
+                    <div class="card-icon">🌊</div>
+                    <h3>Neural Oscillations</h3>
+                    <div class="band-list">
+                        <div class="band-item"><strong>Delta (<4 Hz):</strong> Dominant during deep sleep; associated with healing and recovery.</div>
+                        <div class="band-item"><strong>Theta (4-8 Hz):</strong> Linked to memory, intuition, and deep relaxation.</div>
+                        <div class="band-item"><strong>Alpha (8-13 Hz):</strong> The 'resting' brain; indicates calm focus and mental coordination.</div>
+                        <div class="band-item"><strong>Beta (13-30 Hz):</strong> Active thought, problem-solving, and logical focus.</div>
+                        <div class="band-item"><strong>Gamma (>30 Hz):</strong> Peak mental performance, high-level information processing.</div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Brain Aging -->
+                <div class="knowledge-card">
+                    <div class="card-icon">⏳</div>
+                    <h3>Accelerated Aging</h3>
+                    <p>As we age, neural networks naturally change. <strong>Accelerated Brain Aging</strong> occurs when functional markers (like Alpha power) decline faster than the chronological average, often signaling metabolic stress or cognitive risk.</p>
+                </div>
+
+                <!-- Card 4: The AI Framework -->
+                <div class="knowledge-card">
+                    <div class="card-icon">🤖</div>
+                    <h3>Explainable Deep Learning</h3>
+                    <p>Our framework uses an <strong>Ensemble of 10 Models</strong>, including Deep Neural Networks (MLP), to analyze 25 regional power features. <strong>SHAP values</strong> decompose these complex decisions into human-readable visual contributions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ INPUT SECTION ═══════════════════ -->
+    <section class="section" id="input-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>📊 Subject Input</h2>
+                <p>Enter pre-extracted EEG spectral power features or load a sample subject from the dataset</p>
+            </div>
+
+            <!-- Sample Subjects -->
+            <div class="sample-bar" id="sample-bar">
+                <span class="sample-label">Quick Load:</span>
+                <div class="sample-buttons" id="sample-buttons">
+                    <button class="sample-btn loading" disabled>Loading samples...</button>
+                </div>
+            </div>
+
+            <!-- Model Selector -->
+            <div class="section-header" style="margin-top:1rem;margin-bottom:1rem;">
+                <h3>🤖 Select Prediction Model</h3>
+            </div>
+            <div class="model-selector" id="model-selector">
+                <!-- Populated by JavaScript -->
+            </div>
+
+            <!-- Input Form -->
+            <form id="prediction-form" class="feature-form" novalidate>
+                <!-- Chronological Age -->
+                <div class="form-group age-group">
+                    <label for="chronological_age">
+                        <span class="label-icon">🎂</span>
+                        Chronological Age (years)
+                    </label>
+                    <input type="number" id="chronological_age" name="chronological_age" 
+                           min="18" max="100" step="0.1" placeholder="e.g. 55"
+                           class="input-field age-input">
+                    <span class="input-hint">Optional — enables brain age gap calculation</span>
+                </div>
+
+                <div class="form-divider">
+                    <span>EEG Spectral Features</span>
+                </div>
+
+                <!-- Feature Inputs Grid -->
+                <div class="features-grid" id="features-grid">
+                    <!-- Populated by JavaScript -->
+                </div>
+
+                <!-- Submit -->
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" id="clear-btn">Clear All</button>
+                    <button type="submit" class="btn-primary" id="predict-btn">
+                        <span class="btn-text">🧠 Predict Brain Age</span>
+                        <span class="btn-loading" style="display:none;">
+                            <span class="spinner"></span> Analyzing...
+                        </span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Neuro-Analysis Workbench (Progress Overlay) -->
+            <div id="analysis-workbench" class="analysis-workbench" style="display: none;">
+                <div class="workbench-content glass-card">
+                    <div class="workbench-header">
+                        <div class="spinner-large"></div>
+                        <h3>Clinical Neuro-Analysis Workbench</h3>
+                        <p id="workbench-status">Initializing neural engines...</p>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div id="workbench-progress" class="progress-bar-fill" style="width: 0%;"></div>
+                    </div>
+                    <div class="workbench-steps">
+                        <div class="step" id="step-prediction"><span>01</span> Neural Prediction</div>
+                        <div class="step" id="step-xai"><span>02</span> XAI Explainability</div>
+                        <div class="step" id="step-causal"><span>03</span> Causal Simulation</div>
+                        <div class="step" id="step-rl"><span>04</span> RL Action Agent</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ RESULTS SECTION ═══════════════════ -->
+    <section class="section results-section" id="results-section" style="display:none;">
+        <div class="container" id="report-container">
+            
+            <!-- Export Tools -->
+            <div id="export-btn-container" style="display: flex; justify-content: flex-end; margin-bottom: 2rem;">
+                <button type="button" class="btn-primary" onclick="exportClinicalReport()" style="min-width: unset; padding: 0.6rem 1.5rem;">
+                    📄 Export Clinical Report (PDF)
+                </button>
+            </div>
+
+            <!-- Brain Age Gauge -->
+            <div class="results-hero">
+                <div class="gauge-card glass-card">
+                    <h3>Predicted Brain Age</h3>
+                    <div class="gauge-container" id="gauge-container">
+                        <canvas id="gauge-canvas" width="280" height="200"></canvas>
+                        <div class="gauge-value" id="gauge-value">--</div>
+                        <div class="gauge-label">years</div>
+                    </div>
+                </div>
+
+                <div class="gap-card glass-card" id="gap-card">
+                    <h3>Brain Age Gap</h3>
+                    <div class="gap-value" id="gap-value">--</div>
+                    <div class="gap-description" id="gap-description">
+                        Enter chronological age to see the gap
+                    </div>
+                </div>
+
+                <div class="model-card glass-card">
+                    <h3>Active Model</h3>
+                    <div class="model-info">
+                        <div class="info-row">
+                            <span>Algorithm</span>
+                            <span class="mono" id="active-model-name">--</span>
+                        </div>
+                        <div class="info-row">
+                            <span>R² Score</span>
+                            <span class="mono" id="r2-score">--</span>
+                        </div>
+                        <div class="info-row">
+                            <span>CV R²</span>
+                            <span class="mono" id="cv-r2-score">--</span>
+                        </div>
+                        <div class="info-row">
+                            <span>MAE</span>
+                            <span class="mono" id="mae-score">--</span>
+                        </div>
+                        <div class="info-row">
+                            <span>Explainability</span>
+                            <span class="mono">SHAP + LIME</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 3: Spatial Heatmap & Longitudinal Tracking -->
+            <div class="results-hero" style="margin-top: 2rem;">
+                <!-- Spatial Brain Heatmap -->
+                <div class="heatmap-card glass-card">
+                    <h3>Spatial Brain Heatmap</h3>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem;">
+                        <span style="color:var(--amber);">■</span> Accelerating Aging &nbsp;&nbsp; 
+                        <span style="color:var(--green);">■</span> Protective
+                    </div>
+                    <div class="heatmap-container" id="heatmap-container">
+                        <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" id="brain-svg">
+                            <!-- Frontal lobe -->
+                            <path id="region-Frontal" d="M100 20 C60 20 30 50 30 90 L100 110 L170 90 C170 50 140 20 100 20 Z" fill="#2d3748" stroke="#4a5568" stroke-width="2"><title>Frontal Lobe</title></path>
+                            <!-- Central lobe (motor strip) -->
+                            <path id="region-Central" d="M30 90 C20 120 20 150 40 170 L100 130 L160 170 C180 150 180 120 170 90 L100 110 Z" fill="#2d3748" stroke="#4a5568" stroke-width="2"><title>Central Region</title></path>
+                            <!-- Parietal lobe -->
+                            <path id="region-Parietal" d="M40 170 C60 200 80 210 100 210 C120 210 140 200 160 170 L100 130 Z" fill="#2d3748" stroke="#4a5568" stroke-width="2"><title>Parietal Lobe</title></path>
+                            <!-- Occipital lobe -->
+                            <path id="region-Occipital" d="M70 190 C85 230 115 230 130 190 L100 175 Z" fill="#2d3748" stroke="#4a5568" stroke-width="2"><title>Occipital Lobe</title></path>
+                            <!-- Temporal lobes -->
+                            <path id="region-Temporal" d="M30 90 C10 110 5 150 20 180 C25 170 30 150 40 170 L30 90 Z M170 90 C190 110 195 150 180 180 C175 170 170 150 160 170 L170 90 Z" fill="#2d3748" stroke="#4a5568" stroke-width="2"><title>Temporal Lobe</title></path>
+                            <!-- Brain outline overlay -->
+                            <path d="M100 20 C40 20 10 70 15 130 C20 190 60 230 100 230 C140 230 180 190 185 130 C190 70 160 20 100 20 Z" fill="none" stroke="#6366f1" stroke-width="3" opacity="0.3"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Longitudinal Tracking -->
+                <div class="history-card glass-card" style="grid-column: span 2;">
+                    <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom:1rem;">
+                        <h3 style="margin:0;">Longitudinal Patient History</h3>
+                        <button class="btn-secondary" style="font-size: 0.75rem; padding: 0.2rem 0.8rem;" onclick="clearPatientHistory()">Clear</button>
+                    </div>
+                    <div class="history-container" id="history-container">
+                        <canvas id="history-canvas" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══════════════ DOCTOR DASHBOARD ═══════════════ -->
+            <div class="section-header" style="margin-top:2rem;">
+                <h2>🩺 Clinical Intelligence Dashboard</h2>
+                <p>Comprehensive risk analysis, disease correlation, and prediction confidence</p>
+            </div>
+
+            <!-- Tabs Navigation -->
+            <div class="tabs" style="display:flex; gap:1rem; margin-bottom:1.5rem; justify-content:center;">
+                <button class="btn-primary tab-btn active" data-tab="overview">Clinical Overview</button>
+                <button class="btn-secondary tab-btn" data-tab="research">Advanced Research Suite</button>
+            </div>
+
+            <!-- Wrapper for Overview Tab -->
+            <div id="overview-tab" class="tab-content">
+                <!-- Row 1: Risk Badge + Multi-Target Scores + Confidence -->
+                <div class="results-hero" style="margin-bottom:2rem;">
+
+                <!-- Risk Category -->
+                <div class="glass-card" id="risk-card" style="text-align:center;">
+                    <h3 style="font-size:0.85rem;text-transform:uppercase;color:var(--text-muted);letter-spacing:0.05em;">Risk Category</h3>
+                    <div id="risk-badge" style="font-size:2rem;font-weight:800;margin:0.8rem 0;">--</div>
+                    <div id="risk-severity" style="font-size:0.95rem;font-weight:600;margin-bottom:0.5rem;">--</div>
+                    <div id="risk-description" style="font-size:0.78rem;color:var(--text-muted);line-height:1.5;">--</div>
+                </div>
+                
+                <!-- Multi-Target Scores -->
+                <div class="glass-card" id="multi-target-card">
+                    <h3 style="font-size:0.85rem;text-transform:uppercase;color:var(--text-muted);letter-spacing:0.05em;">Multi-Target Predictions</h3>
+                    <div style="margin-top:1rem;">
+                        <div class="info-row"><span>🧠 Cognitive Score</span><span class="mono" id="cognitive-score-val">--</span></div>
+                        <div class="info-row"><span>Label</span><span class="mono" id="cognitive-label-val">--</span></div>
+                        <div class="info-row"><span>⚠️ Risk Score</span><span class="mono" id="risk-score-val">--</span></div>
+                        <div class="info-row"><span>Label</span><span class="mono" id="risk-label-val">--</span></div>
+                    </div>
+                </div>
+
+                <!-- Prediction Confidence -->
+                <div class="glass-card" id="confidence-card">
+                    <h3 style="font-size:0.85rem;text-transform:uppercase;color:var(--text-muted);letter-spacing:0.05em;">Prediction Confidence</h3>
+                    <div style="margin-top:1rem;">
+                        <div class="info-row"><span>Ensemble Agreement</span><span class="mono" id="ensemble-agreement">--</span></div>
+                        <div class="info-row"><span>95% CI</span><span class="mono" id="ensemble-ci">--</span></div>
+                        <div class="info-row"><span>MC Dropout CI</span><span class="mono" id="mc-ci">--</span></div>
+                        <div class="info-row"><span>Confidence</span><span class="mono" id="confidence-pct">--</span></div>
+                        <div class="info-row"><span>🏆 Best Model</span><span class="mono" id="meta-best-model">--</span></div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <!-- Model Comparison Table -->
+            <div class="section-header" style="margin-bottom:1rem;">
+                <h3>📈 Model Comparison</h3>
+            </div>
+            <div class="comparison-card glass-card" id="comparison-card" style="margin-bottom:2rem;overflow-x:auto;">
+                <table class="comparison-table" id="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Prediction</th>
+                            <th>R²</th>
+                            <th>CV R²</th>
+                            <th>MAE</th>
+                        </tr>
+                    </thead>
+                    <tbody id="comparison-tbody">
+                        <!-- Populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Overall Assessment -->
+            <div class="assessment-card glass-card" id="assessment-card">
+                <div class="assessment-icon" id="assessment-icon">🧠</div>
+                <div class="assessment-content">
+                    <h3 id="assessment-title">--</h3>
+                    <p id="assessment-summary">--</p>
+                </div>
+            </div>
+
+            <!-- Feature Contributions (Combined SHAP & LIME) -->
+            <div class="section-header">
+                <h2>🔍 Feature Contributions (SHAP vs. LIME)</h2>
+                <p>Directional comparison: How each feature pushed the predicted age higher (aging) or lower (youthful)</p>
+            </div>
+
+            <div class="shap-card glass-card">
+                <canvas id="shap-chart" width="800" height="500"></canvas>
+            </div>
+
+
+
+            <!-- Health Recommendations -->
+            <div class="section-header">
+                <h2>💊 Personalized Health Recommendations</h2>
+                <p>Evidence-based suggestions based on your brain age profile</p>
+            </div>
+
+            <!-- RL Action Agent Suggestions -->
+            <div id="rl-recommendations" style="margin-bottom: 2rem;">
+                <!-- Populated by RL Agent -->
+            </div>
+            
+            <!-- Feature-specific recommendations -->
+            <div class="recommendations-grid" id="recommendations-grid">
+                <!-- Populated by JavaScript -->
+            </div>
+
+
+            <!-- General Tips -->
+            <div class="section-header" style="margin-top: 2rem;">
+                <h3>🌟 General Brain Health Guidelines</h3>
+            </div>
+            <div class="general-tips" id="general-tips">
+                <!-- Populated by JavaScript -->
+            </div>
+
+            </div> <!-- End Overview Tab -->
+            
+            <!-- ═══════════════ RESEARCH SUITE TAB ═══════════════ -->
+            <div id="research-tab" class="tab-content" style="display:none; margin-bottom:3rem;">
+                
+                <div class="results-hero">
+                    <!-- 3D Neuro-Spatial Viewer -->
+                    <div class="glass-card" style="grid-column: span 2; min-height: 400px; position:relative;">
+                        <h3 style="position:absolute; top:1.5rem; left:1.5rem; z-index:10;">3D Neuro-Spatial Contribution Map</h3>
+                        <div id="neuro-3d-container" style="width:100%; height:100%; border-radius:12px; overflow:hidden;"></div>
+                    </div>
+                </div>
+
+                <div class="results-hero" style="margin-top:2rem;">
+                    <!-- Disease Radar -->
+                    <div class="glass-card">
+                        <h3>Disease Correlation Radar</h3>
+                        <div style="height:250px;"><canvas id="disease-radar-chart"></canvas></div>
+                        <div id="disease-details" style="font-size:0.8rem; margin-top:1rem; font-family:monospace;"></div>
+                    </div>
+                    
+                    <!-- TCAV Sensitivity -->
+                    <div class="glass-card">
+                        <h3>TCAV Concept Sensitivity</h3>
+                        <p style="font-size:0.75rem; color:var(--text-muted);">Testing directional alignment with underlying aging concepts.</p>
+                        <div style="height:220px;"><canvas id="tcav-chart"></canvas></div>
+                    </div>
+                </div>
+                
+                <div class="results-hero" style="margin-top:2rem;">
+                    <!-- Counterfactual Scenarios -->
+                    <div class="glass-card">
+                        <h3>Counterfactual Action Scenarios</h3>
+                        <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:1rem;">Simulated feature perturbations to reverse brain aging.</p>
+                        <div id="counterfactual-list"></div>
+                    </div>
+
+                    <!-- Region Radar -->
+                    <div class="glass-card">
+                        <h3>Regional Impact Radar</h3>
+                        <div style="height:250px;"><canvas id="region-radar-chart"></canvas></div>
+                    </div>
+                </div>
+                
+                <!-- Causal & Future Trajectory -->
+                <div class="results-hero" style="margin-top:2rem;">
+                    <div class="glass-card">
+                        <h3>Causal Do-Calculus (Sleep Intervention)</h3>
+                        <p style="font-size:0.8rem; color:var(--text-muted);">Simulated intervention: Setting sleep quality exactly to 8.5/10</p>
+                        <div id="causal-ate" style="margin-top:1rem; font-size:1.5rem; font-weight:700; color:var(--green);">--</div>
+                    </div>
+                    
+                    <div class="glass-card" style="grid-column: span 2;">
+                        <h3>Future Prognostic Trajectory (10 Years)</h3>
+                        <div style="height:250px;"><canvas id="trajectory-chart"></canvas></div>
+                    </div>
+                </div>
+
+            </div> <!-- End Research Tab -->
+    </section>
+
+    <!-- ═══════════════════ FOOTER ═══════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <p>
+                Built on the <strong>DS003775 SRM Resting-state EEG</strong> dataset
+                · <a href="https://openneuro.org/datasets/ds003775" target="_blank" rel="noopener">OpenNeuro</a>
+                · <a href="https://doi.org/10.1016/j.dib.2022.108647" target="_blank" rel="noopener">Paper</a>
+            </p>
+            <p class="disclaimer">
+                ⚠️ This tool is for research and educational purposes only. It is not a medical diagnostic device.
+                Always consult healthcare professionals for medical decisions.
+            </p>
+        </div>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:\Users\tarin\OneDrive\Desktop\maj_pro\test_predict.py", line 2, in <module>
+    from app import brain_model, init_models
+ImportError: cannot import name 'init_models' from 'app' (C:\Users\tarin\OneDrive\Desktop\maj_pro\app.py)
