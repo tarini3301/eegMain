@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# eegMain
-=======
+
 # 🧠 NeuroAge: Explainable Deep Learning for EEG-Based Brain Age Prediction
 
 > **A clinical-grade, research-oriented platform for predicting functional brain age from Resting-State EEG spectral power features, powered by 17 ML/DL models, dual XAI (SHAP + LIME), causal AI, and a reinforcement learning recommendation agent.**
@@ -167,4 +165,3 @@ Based on the **OpenNeuro DS003775** dataset: Resting-state EEG recordings.
 - **FedAvg**: McMahan et al., "Communication-Efficient Learning of Deep Networks" (AISTATS 2017)
 - **DANN**: Ganin et al., "Domain-Adversarial Training of Neural Networks" (JMLR 2016)
 - **Do-Calculus**: Pearl, "Causality" (Cambridge University Press, 2009)
->>>>>>> d5989d7 (Initial commit)
