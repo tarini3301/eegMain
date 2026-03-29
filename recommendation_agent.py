@@ -64,13 +64,13 @@ class RecommendationAgent:
 
     def _get_action_description(self, action):
         descriptions = {
-            'Improve Sleep': 'Targeting 7.5-8.5 hours to improve frontal lobe recovery.',
-            'Reduce Stress': 'Implementing cortisol-lowering protocols to reduce theta/alpha ratio.',
-            'Optimize Nutrition': 'High-omega-3 ketogenic diet to support neural membrane repair.',
-            'Daily Meditation': 'Gamma-state focus sessions to increase functional connectivity.',
-            'Cardio Exercise': 'Aerobic threshold work to boost BDNF (Brain-Derived Neurotrophic Factor).'
+            'Improve Sleep': '🧠 **Glymphatic Protocol:** Target 7.5-8.5 hours in a cool (65°F / 18°C) dark environment to optimize amyloid-beta clearance through the sleep-driven brain-washing cycle.',
+            'Reduce Stress': '🌊 **Vagal Regulation:** Implement HRV-based biofeedback or deep diaphragmatic breathing to lower high-beta "overdrive" and improve the theta/alpha metabolic ratio.',
+            'Optimize Nutrition': '🥬 **Nrf2-Activation:** High-omega-3 intake combined with sulforaphane-rich foods to trigger internal antioxidant production and reduce neural membrane oxidation.',
+            'Daily Meditation': '⚡ **Gamma Synchronization:** Specifically 40Hz-focused mindfulness sessions to reinforce parvalbumin interneuron health and improve long-range connectivity.',
+            'Cardio Exercise': '🏃 **BDNF Priming:** 150 minutes of Zone-2 (60-70% max HR) aerobic work weekly to maximize Brain-Derived Neurotrophic Factor and maintain hippocampal volume.'
         }
-        return descriptions.get(action, "Clinical intervention recommended.")
+        return descriptions.get(action, "Clinical-grade neuro-intervention recommended.")
 
 # Global instance
 agent = RecommendationAgent()

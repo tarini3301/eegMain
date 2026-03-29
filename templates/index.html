@@ -95,6 +95,20 @@
                     <h3>Explainable Deep Learning</h3>
                     <p>Our framework uses an <strong>Ensemble of 10 Models</strong>, including Deep Neural Networks (MLP), to analyze 25 regional power features. <strong>SHAP values</strong> decompose these complex decisions into human-readable visual contributions.</p>
                 </div>
+
+                <!-- Card 5: Neural Plasticity -->
+                <div class="knowledge-card">
+                    <div class="card-icon">🧬</div>
+                    <h3>Synaptic Plasticity</h3>
+                    <p>The brain's ability to reorganize itself by forming new neural connections. <strong>Hebbian's Principle</strong> (neurons that fire together, wire together) is the foundation of cognitive resilience—high Gamma power is a hallmark of strong synaptic synchronization.</p>
+                </div>
+
+                <!-- Card 6: The Glymphatic System -->
+                <div class="knowledge-card">
+                    <div class="card-icon">🌙</div>
+                    <h3>Glymphatic Clearance</h3>
+                    <p>A specialized 'waste-clearance' system that removes neurotoxic proteins (like amyloid-beta) during deep sleep. <strong>Delta wave dominance</strong> during NREM sleep is critical for this 'brain-washing' cycle, which slows significantly as we age.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -419,6 +433,9 @@
                     <!-- TCAV Sensitivity -->
                     <div class="glass-card">
                         <h3>TCAV Concept Sensitivity</h3>
+                        <div class="knowledge-note">
+                            🧪 <strong>Testing Model Directionality:</strong> TCAV (Testing with Concept Activation Vectors) calculates how sensitive the model is to a specific concept (e.g., "Aging"). It measures if the AI model's internal logic aligns with established neuro-scientific concepts.
+                        </div>
                         <p style="font-size:0.75rem; color:var(--text-muted);">Testing directional alignment with underlying aging concepts.</p>
                         <div style="height:220px;"><canvas id="tcav-chart"></canvas></div>
                     </div>
@@ -428,6 +445,9 @@
                     <!-- Counterfactual Scenarios -->
                     <div class="glass-card">
                         <h3>Counterfactual Action Scenarios</h3>
+                        <div class="knowledge-note">
+                            🔀 <strong>Simulated Interventions:</strong> Counterfactuals help answer "What if?" by finding the minimum feature changes (e.g., reducing Frontal Theta) required to reverse the brain age prediction. This provides actionable clinical targets for intervention.
+                        </div>
                         <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:1rem;">Simulated feature perturbations to reverse brain aging.</p>
                         <div id="counterfactual-list"></div>
                     </div>
@@ -443,6 +463,9 @@
                 <div class="results-hero" style="margin-top:2rem;">
                     <div class="glass-card">
                         <h3>Causal Do-Calculus (Sleep Intervention)</h3>
+                        <div class="knowledge-note">
+                            ⚖️ <strong>Causal Inference:</strong> Unlike correlation, 'Do-Calculus' (Pearl's Causal Model) simulates a direct intervention on a variable (e.g., Sleep) to calculate its average treatment effect (ATE) on the predicted brain age gap.
+                        </div>
                         <p style="font-size:0.8rem; color:var(--text-muted);">Simulated intervention: Setting sleep quality exactly to 8.5/10</p>
                         <div id="causal-ate" style="margin-top:1rem; font-size:1.5rem; font-weight:700; color:var(--green);">--</div>
                     </div>

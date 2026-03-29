@@ -1216,3 +1216,24 @@ a:hover { text-decoration: underline; }
     margin-bottom: 0.2rem;
 }
 
+/* ─── Knowledge Notes ─── */
+.knowledge-note {
+    background: rgba(99, 102, 241, 0.08);
+    border-left: 3px solid #6366f1;
+    padding: 0.8rem 1rem;
+    border-radius: 4px 8px 8px 4px;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.knowledge-note strong {
+    color: #818cf8;
+    display: block;
+    margin-bottom: 0.2rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+

@@ -468,7 +468,11 @@ function displayResults(result) {
     document.getElementById('active-model-name').textContent = result.model_name;
     document.getElementById('r2-score').textContent = result.model_r2.toFixed(4);
     document.getElementById('cv-r2-score').textContent = result.model_cv_r2.toFixed(4);
-    document.getElementById('mae-score').textContent = result.model_mae.toFixed(2) + 'y';
+    
+    // MAE Clinical Note: Average error in years
+    const mae = result.model_mae.toFixed(2);
+    document.getElementById('mae-score').textContent = `${mae}y`;
+    document.getElementById('mae-score').title = `Mean Absolute Error: On average, this model's prediction deviates from the true brain age by ${mae} years.`;
 
     // Comparison Table
     renderComparisonTable(result);
@@ -1127,6 +1131,7 @@ function displayMultiTarget(mt) {
 function displayConfidence(ensemble, mc, meta) {
     if (ensemble) {
         document.getElementById('ensemble-agreement').textContent = ensemble.agreement;
+        document.getElementById('ensemble-agreement').title = "Consensus among 10 distinct ML models (XGBoost, DNN, SVR, etc.). High agreement indicates stable diagnostic convergence.";
         document.getElementById('ensemble-ci').textContent = `[${ensemble.ci_lower}, ${ensemble.ci_upper}]`;
         document.getElementById('confidence-pct').textContent = `${ensemble.confidence_percent}%`;
     }

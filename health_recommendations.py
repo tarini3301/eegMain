@@ -16,52 +16,52 @@ BAND_RECOMMENDATIONS = {
     "Delta": {
         "icon": "🌊",
         "aging_recommendations": [
-            "Excessive Delta waves while awake may indicate cognitive fatigue, slowing, or neurodegeneration.",
-            "Prioritize deep, restorative sleep (7-9 hours). Delta waves are crucial during NREM sleep but should be minimal while awake.",
-            "Consult a physician if you experience chronic daytime sleepiness or persistent brain fog.",
-            "Regular aerobic exercise helps consolidate normal sleep architecture and limits awake slow-wave intrusions."
+            "🧠 **Glymphatic Insight:** Delta waves are the 'engine' of the brain's waste-clearance (glymphatic) system. Lack of slow-wave sleep prevents the removal of amyloid-beta and tau proteins, accelerating neural aging.",
+            "Excessive Delta while awake often points to 'metabolic slowing.' Intrusive slow waves can cloud focus and signal early-stage neurological decline.",
+            "🛌 **Sleep Protocol:** Prioritize 7.5-9 hours of consistent, deep sleep in a 65°F (18°C) environment. Use Magnesium Glycinate (200-400mg) to reinforce GABA-ergic slow-wave integrity.",
+            "Avoid blue light (screens) 90 minutes before bed; artificial light at night suppresses the naturally occurring Delta-reinforcing melatonin surge."
         ],
-        "youthful_note": "Your Delta wave activity is at a healthy, minimal level for a resting wakeful state.",
+        "youthful_note": "Your Delta activity is optimally suppressed during wakefulness, indicating a sharp, metabolically efficient 'alert' state.",
     },
     "Theta": {
         "icon": "🧘",
         "aging_recommendations": [
-            "Increased Theta power in resting wakefulness is strongly associated with cognitive decline, inattention, or early age-related slowing.",
-            "Practice mindfulness meditation to improve focus and regulate Theta-to-Beta ratios.",
-            "Ensure you are getting enough cardiovascular exercise, which improves overall cortical efficiency and metabolic health.",
-            "Engage in cognitively demanding tasks (like learning a new language) to stimulate faster brain rhythms."
+            "📊 **Theta-Beta Marker:** A high Theta/Beta ratio is a gold-standard indicator for cognitive slowing and ADHD-like inattentiveness. In aging, increased Theta suggests 'cortical thinning' and reduced information processing speed.",
+            "Increased Theta power is strongly linked to neuro-inflammation. It indicates the brain is 'idling' at a suboptimal frequency during complex tasks.",
+            "🍉 **Metabolic Support:** Practice Intermittent Fasting (e.g., 16:8) which promotes Autophagy—the cellular recycling process that cleans 'clogged' Theta-producing circuits.",
+            "🚀 **Cognitive Training:** Engage in Dual N-Back tasks for 15-20 minutes daily. This forces the brain to shift from slow Theta to more efficient high-frequency learning states."
         ],
-        "youthful_note": "Your Theta activity shows healthy cognitive control and an absence of drowsy-state intrusion.",
+        "youthful_note": "Your Theta activity shows healthy cognitive control and robust resistance to age-related 'drowsy-state' slowing.",
     },
     "Alpha": {
         "icon": "⚡",
         "aging_recommendations": [
-            "Decreased Alpha power and slowing of the Alpha peak frequency (especially in the parieto-occipital regions) is a major hallmark of the aging brain.",
-            "Engage in relaxation techniques; healthy Alpha waves are dominant when you are calm with your eyes closed.",
-            "Activities that require visual processing and spatial navigation can help stimulate posterior Alpha networks.",
-            "A Mediterranean diet rich in antioxidants helps preserve the structural integrity of networks generating Alpha Rhythms."
+            "🕰️ **The Brain's Clock:** Your 'Alpha-Peak Frequency' (APF) is your brain's internal processing speed. Slowing of this rhythm below 9Hz is a primary sign of functional brain aging and memory risk.",
+            "Decreased Alpha power often signals a 'hyper-aroused' nervous system that can't enter the parasympathetic (rest-and-digest) state required for repair.",
+            "🌳 **Forest Bathing:** Spend 40+ minutes in nature ('Shinrin-yoku'). The fractal patterns in nature naturally entrain the brain's posterior Alpha rhythm, reducing sympathetic stress.",
+            "🧘 **Alpha-Breathing:** Practice Box Breathing (In 4s, Hold 4s, Out 4s, Hold 4s). This increases 'coherence'—the synchronization of Alpha waves across your frontal and parietal lobes."
         ],
-        "youthful_note": "Your Alpha power is strong and robust, typical of a healthy, youthful resting brain.",
+        "youthful_note": "Your Alpha power is strong and robust; your Alpha-peak is healthy and fast, typical of a high-performance youthful brain.",
     },
     "Beta": {
         "icon": "🎯",
         "aging_recommendations": [
-            "Changes in Beta power can relate to stress, anxiety, or compensatory cognitive effort in the aging brain.",
-            "Manage chronic stress and anxiety through structured relaxation—excess Frontal Beta can mean an 'overactive' or anxious mind.",
-            "Focus on single-tasking rather than multi-tasking to improve cortical efficiency and reduce cognitive load.",
-            "Reduce caffeine and stimulant intake if you feel chronically tense or suffer from insomnia."
+            "⚖️ **Beta Balance:** Differentiate between Beta-1 (13-20Hz: Focus) and High-Beta (>25Hz: Cortisol & Anxiety). Excessive High-Beta for long periods 'burns out' neural energy and drives oxidative stress.",
+            "Chronic High-Beta indicates an overactive stress response ('fight or flight'), which prevents the brain from transitioning into deep recovery states.",
+            "📉 **Biofeedback:** Implement HRV (Heart Rate Variability) training using a wearable device. Improving your HRV is the most effective way to 'cool down' hyper-active Beta circuits.",
+            "🍵 **L-Theanine:** Consider green tea or L-Theanine supplements to modulate Beta activity, allowing for 'calm focus' (Beta-1) without the damaging High-Beta anxiety."
         ],
-        "youthful_note": "Your Beta wave distribution is optimal, suggesting an alert, attentive, but not overstimulated state.",
+        "youthful_note": "Your Beta wave distribution is perfectly balanced, suggesting an alert, focused mind with minimal stress-induced noise.",
     },
     "Gamma": {
         "icon": "🧠",
         "aging_recommendations": [
-            "Gamma waves are associated with high-level cognitive processing, sensory binding, and memory consolidation.",
-            "Engage in complex, novel learning tasks (like playing a musical instrument) to boost Gamma synchronization.",
-            "A diet rich in Omega-3 fatty acids (DHA, EPA) supports the parvalbumin interneurons that generate Gamma rhythms.",
-            "Social interaction and active conversation significantly stimulate Gamma binding networks."
+            "⚡ **Neural Binding:** Gamma waves (30-80Hz) represent the 'binding' of information across different brain regions. High Gamma is essential for complex memory, creativity, and deep insight.",
+            "Low Gamma is linked to the aging of parvalbumin (PV) interneurons—specialized cells that act as the neuro-pacemakers for high-performance cognitive states.",
+            "🍫 **Flavonoid Support:** Consume high-polyphenol 'Brain Foods' like blueberries, dark chocolate (>70%), and organic walnuts to protect the PV-interneurons from age-related degradation.",
+            "🎻 **Novel Learning:** Learn a complex new motor skill, like playing a musical instrument or dancing. These activities force diverse neural ensembles to synchronize at Gamma frequencies."
         ],
-        "youthful_note": "Your Gamma activity indicates excellent neural network synchronization and profound cognitive readiness.",
+        "youthful_note": "Your Gamma activity indicates masterpiece-level neural synchronization and profound readiness for complex cognitive processing.",
     }
 }
 
@@ -222,28 +222,33 @@ def generate_recommendations(brain_age_gap, feature_contributions, cognitive_sco
     general_tips = [
         {
             "icon": "🏃",
-            "title": "Regular Aerobic Exercise",
-            "detail": "150+ minutes weekly. Aerobic exercise promotes neurogenesis and increases high-frequency neural synchronization.",
+            "title": "Metabolic Neuro-Priming",
+            "detail": "150+ minutes of Zone 2 aerobic exercise weekly. This triggers the release of **BDNF** (Brain-Derived Neurotrophic Factor), a 'fertilizer' for new neurons that reverses age-related hippocampal shrinkage.",
         },
         {
-            "icon": "🐟",
-            "title": "Omega-3 Rich Diet",
-            "detail": "DHA and EPA fatty acids are critical for the formation and maintenance of synapses that generate fast brain rhythms.",
+            "icon": "🥑",
+            "title": "Neuro-Nutrient Strategy",
+            "detail": "Prioritize high DHA/EPA Omega-3s and Sulforaphane (from broccoli sprouts). These compounds activate the **Nrf2 pathway**, the brain's primary internal defense against oxidative stress and aging.",
         },
         {
-            "icon": "😴",
-            "title": "Deep Sleep Architecture",
-            "detail": "Slow-wave sleep clears amyloid beta. Poor sleep fragments daytime EEG and intrudes slow waves into wakefulness.",
+            "icon": "🌙",
+            "title": "Autophagic Sleep Cycle",
+            "detail": "Maintain a consistent 7-9 hour sleep window. Deep NREM sleep is the only time the brain performs **Autophagy**—a 'self-eating' process that recycles damaged proteins before they form toxic plaques.",
         },
         {
-            "icon": "🧘",
-            "title": "Mindfulness & Relaxation",
-            "detail": "Enhances resting-state Alpha power and reduces hyperactive Beta states associated with chronic stress and cortisol.",
+            "icon": "🧪",
+            "title": "Hormetic Stress (Sauna/Cold)",
+            "detail": "Occasional exposure to extreme heat (sauna) or cold (showers) triggers **Heat Shock Proteins (HSPs)**, which repair misfolded proteins and strengthen the brain's resilience to chronic aging.",
         },
         {
-            "icon": "🧠",
-            "title": "Novel Cognitive Challenge",
-            "detail": "Learning completely new skills (like an instrument) forces distinct neural ensembles to synchronize, boosting Gamma power.",
+            "icon": "🧩",
+            "title": "Cognitive Reserve Building",
+            "detail": "Consistently learn skills that occupy 'novel' neural territory (e.g., 3D modeling, new languages). This builds **Cognitive Reserve**, allowing the brain to maintain high function even as physical aging occurs.",
+        },
+        {
+            "icon": "🤝",
+            "title": "Social Synaptic Pruning",
+            "detail": "High-quality social interaction reduces 'loneliness-induced neuro-inflammation.' Engaging in complex conversation is one of the most demanding and protective tasks for the human frontal lobe.",
         },
     ]
     
